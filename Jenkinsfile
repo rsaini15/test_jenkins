@@ -7,6 +7,7 @@ pipeline {
                 echo 'Hello World'
                 // or your typo version
                 // echo 'Hellow Rold'
+                ls
             }
         }
     }
