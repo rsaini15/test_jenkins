@@ -1,13 +1,21 @@
+@Library('my-shared-lib') _
+
 pipeline {
     agent any
 
     stages {
-        stage('Print Message') {
+        stage('Say Hello') {
             steps {
-                echo 'Hello World'
-                // or your typo version
-                // echo 'Hellow Rold'
-                sh 'ls'
+                sayHello('Jenkins') // from vars
+            }
+        }
+
+        stage('Use Utility Class') {
+            steps {
+                script {
+                    def utils = new org.example.MyUtils(this)
+                    utils.greet('Bob') // from src
+                }
             }
         }
     }
