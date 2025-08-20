@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Say Hello') {
             steps {
-                sayHello('Jenkins') // from vars
+                sayHello('jenkins test') // from vars
             }
         }
 
