@@ -3,6 +3,10 @@
 pipeline {
     agent any
 
+    options {
+        skipDefaultCheckout()
+    }
+
     stages {
         stage('Say Hello') {
             steps {
